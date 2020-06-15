@@ -329,11 +329,41 @@
               </li>
             </ul>
           </div>
+        <form class="form js-speaker-form">
+        <label for="mail" class="label-subscription">подпишитесь на рассылку</label>
+        </br>
+        <div class="form-subscription">
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="E-mail"
+        />
+        <button type="submit">Подписаться<svg class="icon-send" width="24" height="24">
+          <use href="./images/sprite.svg#send"></use></svg>
+        </button>
+      </div>
         </div>
         <p class="copyright">
           2020 | Developed by GoIT Students
         </p>
       </div>
+      </div>
     </footer>
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
