@@ -62,7 +62,11 @@
           <div class="backdrop is-hidden" data-backdrop>
             <form class="modal js-speaker-form" autocomplete="off">
               <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
-                <div class="form-field">
+              <div class="form-field">
+        <span class="form-icon">
+          <svg class="icon-modal-mail" width=15 height=12>
+           <use href="./images/sprite.svg#icon-modal-name"></use>
+          </svg></span>
         <input
           type="text"
           class="form-input"
@@ -70,12 +74,14 @@
           id="name"
           placeholder=" "
         />
-        <label for="name" class="form-label">
-        <span class="icon"></span>
-        <span class="label-descr">Имя</span>
-      </label>
+        <label for="name" class="form-label">Имя</label>
       </div>
       <div class="form-field">
+      <span class="form-icon">
+        <svg class="icon-modal-mail" width=15 height=12>
+           <use href="./images/sprite.svg#icon-modal-phone"></use>
+          </svg>
+      </span>
       <input
           type="tel"
           class="form-input"
@@ -83,12 +89,14 @@
           id="telephone"
           placeholder=" "
         />
-        <label for="telephone" class="form-label">
-          <span class="icon"></span>
-          <span class="label-descr">Телефон</span>
-        </label>
+        <label for="telephone" class="form-label">Телефон</label>
       </div>
       <div class="form-field">
+        <span class="form-icon">
+          <svg class="icon-modal-mail" width=15 height=12>
+           <use href="./images/sprite.svg#icon-modal-mail"></use>
+          </svg>
+        </span>
         <input
           type="email"
           class="form-input"
@@ -96,25 +104,27 @@
           id="mail"
           placeholder=" "
         />
-        <label for="mail" class="form-label">
-          <span class="icon"></span>
-          <span class="label-descr">Почта</span>
-        </label>
+        <label for="mail" class="form-label">Почта</label>
       </div>
       <div class="form-field-comment">
         <textarea
-          class="comment"
+          class="form-textarea"
           name="comment"
           id="comment"
           rows="8"
           placeholder=" "
         ></textarea>
-        <label for="comment">Комментарий</label>
+        <label for="comment" class="form-comment">Комментарий</label>
       </div>
-       <div class="form-field">
-        <input type="checkbox" name="policy" id="policy" />
-        <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-      </div>
+       <label class="consent">
+              <input
+                class="check-input"
+                type="checkbox"
+                name="consent"
+                value="consent"
+              />Соглашаюсь с рассылкой и принимаю &nbsp;
+                <a class="text-link" href="">Условия договора</a>
+            </label>
       <button>Отправить</button>
               <button data-close-modal>Закрыть</button>
             </form>
