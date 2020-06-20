@@ -116,17 +116,19 @@
         ></textarea>
         <label for="comment" class="form-comment">Комментарий</label>
       </div>
-       <label class="consent">
+       <label class="form-checkbox">
               <input
-                class="check-input"
+                class="input-checkbox"
                 type="checkbox"
-                name="consent"
-                value="consent"
-              />Соглашаюсь с рассылкой и принимаю &nbsp;
-                <a class="text-link" href="">Условия договора</a>
+                name="term"
+                value="term"
+              />
+            <span class="icon-checkbox"></span>
+            <span class="label-checkbox">Соглашаюсь с рассылкой и принимаю
+              <a class="text-link" href="">Условия договора</a></span>
             </label>
-      <button>Отправить</button>
-              <button data-close-modal>Закрыть</button>
+      <button class="button-send">Отправить</button>
+              <button class="btn-close" data-close-modal></button>
             </form>
             </div>
           </div>
